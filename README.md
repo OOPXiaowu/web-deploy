@@ -7,7 +7,8 @@
 ##### 环境配置: 可以轻松配置不同环境下的API地址和其他设置。
 ##### 实时预览: 实时预览前端项目的最新改动。
 ##### 一键构建: 一键构建项目并生成可执行文件。
-![输入图片说明](src/assets/web_deploy.png)
+![web_deploy](https://github.com/user-attachments/assets/1f1671e3-1ba3-4008-bc8a-ba78e721cb21)
+
 
 ## 技术栈
 
