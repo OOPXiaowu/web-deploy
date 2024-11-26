@@ -1,0 +1,55 @@
+{
+  "name": "web-deploy",
+  "author": "OOPXiaowu",
+  "private": true,
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "dev:all": "npm-run-all -p dev start:electron",
+    "build:vite": "vite build",
+    "preview": "vite preview",
+    "start:electron": "electron .",
+    "build:exe": "electron-builder --win --ia32"
+  },
+  "build": {
+    "productName": "Web Deploy",
+    "directories": {
+      "output": "build"
+    },
+    "copyright": "Copyright © 2024 OOPXiaowu All rights reserved",
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "win": {
+      "icon": "./public/favicon",
+      "target": "nsis"
+    },
+    "extraResources": [
+      {
+        "from": "public/config",
+        "to": "config"
+      }
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "ant-design-vue": "^4.2.5",
+    "pinia": "^2.2.4",
+    "rimraf": "^6.0.1",
+    "vue": "^3.4.37",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.8",
+    "less": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "sudo-prompt": "^9.2.1",
+    "vite": "^5.4.1"
+  }
+}
